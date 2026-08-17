@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="我的个人网站 - 展示我的项目、技能与经历" />
+  <title>我的个人网站</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- 导航栏 -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="#home" class="logo">
+        <span class="logo-mark">◈</span>
+        <span class="logo-text">你的名字</span>
+      </a>
+      <nav class="nav-links" id="nav-links">
+        <a href="#home" class="active">首页</a>
+        <a href="#about">关于我</a>
+        <a href="#skills">技能</a>
+        <a href="#projects">项目</a>
+        <a href="#contact">联系</a>
+      </nav>
+      <a href="#contact" class="btn btn-primary nav-cta">联系我</a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="打开菜单">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- 首屏 Hero -->
+  <section id="home" class="hero">
+    <canvas id="orb-canvas" aria-hidden="true"></canvas>
+    <div class="container hero-inner">
+      <p class="eyebrow">个人作品集 · Portfolio</p>
+      <h1 class="hero-title">你的<span class="accent">名字</span></h1>
+      <p class="hero-subtitle" id="typed-wrap">我是一名 <span class="typed" id="typed"></span></p>
+      <p class="hero-desc">
+        热爱创造优雅、实用的产品。专注于把复杂的想法变成简洁的解决方案，
+        让技术像深海里的荧光一样自然流动。
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">查看我的作品</a>
+        <a href="#contact" class="btn btn-ghost">联系我</a>
+      </div>
+      <div class="social-links">
+        <a href="#">GitHub</a>
+        <a href="#">微博</a>
+        <a href="#">邮箱</a>
+      </div>
+    </div>
+    <a href="#about" class="scroll-down" aria-label="向下滚动">↓</a>
+  </section>
+
+  <!-- 关于我 -->
+  <section id="about" class="section">
+    <div class="container">
+      <p class="eyebrow">关于我</p>
+      <h2 class="section-title">在深海中潜行，<br />把想法打磨成作品。</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            你好！我是一名充满热情的开发者 / 设计师 / 创作者。我喜欢探索新技术，
+            并用它们解决现实中的问题。
+          </p>
+          <p>
+            在过去的时间里，我参与并主导了多个项目，涵盖 Web 开发、移动应用、
+            数据可视化等领域。我相信持续学习和分享是成长的关键。
+          </p>
+        </div>
+        <div class="stats-row">
+          <div class="stat">
+            <span class="stat-number" data-target="5">0</span>
+            <span class="stat-label">年经验</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-target="30">0</span>
+            <span class="stat-label">完成项目</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-target="20">0</span>
+            <span class="stat-label">满意客户</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 技能 -->
+  <section id="skills" class="section section-deep">
+    <div class="container">
+      <p class="eyebrow eyebrow-mist">技能</p>
+      <h2 class="section-title">我擅长的领域</h2>
+      <div class="skills-grid">
+        <div class="skill-item">
+          <div class="skill-info">
+            <span>HTML / CSS</span>
+            <span>90%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info">
+            <span>JavaScript</span>
+            <span>85%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info">
+            <span>Python</span>
+            <span>75%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info">
+            <span>UI / UX 设计</span>
+            <span>70%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 项目 -->
+  <section id="projects" class="section">
+    <div class="container">
+      <p class="eyebrow">项目</p>
+      <h2 class="section-title">精选作品</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-icon">🖥️</div>
+          <h3>项目一</h3>
+          <p>一个简洁高效的任务管理工具，帮助团队更好地协作。</p>
+          <div class="project-tags">
+            <span>React</span><span>Node.js</span>
+          </div>
+          <a href="#" class="arrow-btn" aria-label="了解更多">↗</a>
+        </article>
+        <article class="project-card">
+          <div class="project-icon">📱</div>
+          <h3>项目二</h3>
+          <p>一款移动端应用，提供个性化的健康数据追踪服务。</p>
+          <div class="project-tags">
+            <span>Flutter</span><span>Firebase</span>
+          </div>
+          <a href="#" class="arrow-btn" aria-label="了解更多">↗</a>
+        </article>
+        <article class="project-card">
+          <div class="project-icon">📊</div>
+          <h3>项目三</h3>
+          <p>数据可视化平台，将复杂数据转化为直观的图表。</p>
+          <div class="project-tags">
+            <span>D3.js</span><span>Python</span>
+          </div>
+          <a href="#" class="arrow-btn" aria-label="了解更多">↗</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系 -->
+  <section id="contact" class="section section-deep contact-section">
+    <div class="container contact-inner">
+      <p class="eyebrow eyebrow-mist">联系我</p>
+      <h2 class="section-title">一起做点有意思的事</h2>
+      <p class="contact-text">
+        有任何想法或合作机会？欢迎随时联系我，我会尽快回复。
+      </p>
+      <form class="contact-form" id="contact-form">
+        <div class="form-row">
+          <input type="text" name="name" placeholder="你的名字" required />
+          <input type="email" name="email" placeholder="你的邮箱" required />
+        </div>
+        <textarea name="message" placeholder="想说的话…" rows="5" required></textarea>
+        <button type="submit" class="btn btn-primary">发送消息</button>
+      </form>
+      <p class="form-status" id="form-status"></p>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> 你的名字</p>
+      <p class="footer-note">在深海般的专注中打磨每一个细节。</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
