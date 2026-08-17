@@ -1,6 +1,6 @@
 // ===== 打字机效果 =====
 const typedElement = document.getElementById('typed');
-const phrases = ['开发者', '设计师', '创作者', '终身学习者'];
+const phrases = ['AI产品经理', '开发者', '设计师', '创作者', '终身学习者'];
 let phraseIndex = 0;
 let charIndex = 0;
 let deleting = false;
@@ -40,10 +40,10 @@ if (canvas) {
   let width, height, centerX, centerY, radius;
 
   const COLORS = [
-    'rgba(203, 255, 252, 0.9)',  // 青白
-    'rgba(0, 130, 124, 0.85)',   // 青绿
-    'rgba(237, 255, 254, 0.9)',  // 雾白
-    'rgba(250, 209, 255, 0.8)',  // 荧光粉（少量）
+    'rgba(23, 25, 28, 0.55)',   // 墨黑
+    'rgba(93, 42, 26, 0.55)',   // 桔棕
+    'rgba(119, 123, 134, 0.5)', // 石板灰
+    'rgba(251, 225, 209, 0.95)',// 暖桃（少量高光）
   ];
 
   function resize() {
@@ -177,13 +177,6 @@ function animateCounters() {
   });
 }
 
-// ===== 技能条动画 =====
-function animateSkills() {
-  document.querySelectorAll('.skill-fill').forEach((fill) => {
-    fill.style.width = fill.dataset.width + '%';
-  });
-}
-
 // ===== 滚动进入动画 =====
 const revealObserver = new IntersectionObserver(
   (entries) => {
@@ -193,9 +186,6 @@ const revealObserver = new IntersectionObserver(
 
         if (entry.target.querySelector('.stat-number')) {
           animateCounters();
-        }
-        if (entry.target.querySelector('.skill-fill')) {
-          animateSkills();
         }
         revealObserver.unobserve(entry.target);
       }
@@ -211,14 +201,3 @@ document.querySelectorAll('.section').forEach((section) => {
 
 // ===== 页脚年份 =====
 document.getElementById('year').textContent = new Date().getFullYear();
-
-// ===== 联系表单处理 =====
-const contactForm = document.getElementById('contact-form');
-const formStatus = document.getElementById('form-status');
-
-contactForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const name = contactForm.name.value.trim();
-  formStatus.textContent = `谢谢${name ? '，' + name : ''}！你的消息已记录（演示环境不会真正发送）。`;
-  contactForm.reset();
-});
