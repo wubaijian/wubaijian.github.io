@@ -3,179 +3,86 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="吴超杰的个人网站 - 展示项目、文章与经历" />
-  <title>吴超杰 · 个人网站</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Source+Serif+4:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
+  <meta name="description" content="吴超杰的个人作品集，记录 AI 产品、独立开发项目与产品思考。" />
+  <meta name="theme-color" content="#f3f1ec" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#121413" media="(prefers-color-scheme: dark)" />
+  <meta property="og:title" content="吴超杰 | AI 产品经理与独立开发者" />
+  <meta property="og:description" content="把想法做成能被使用的产品。" />
+  <meta property="og:type" content="website" />
+  <title>吴超杰 | AI 产品经理与独立开发者</title>
+  <link rel="preload" as="image" href="assets/images/liimit-ai-hero.jpg" fetchpriority="high" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <!-- 导航栏 -->
   <header class="navbar">
     <div class="container navbar-inner">
-      <a href="#home" class="logo">
-        <span class="logo-mark">◈</span>
-        <span class="logo-text">吴超杰</span>
-      </a>
-      <nav class="nav-links" id="nav-links">
-        <a href="#home" class="active">首页</a>
-        <a href="#about">关于我</a>
-        <a href="#articles">文章</a>
-        <a href="#projects">项目</a>
-        <a href="#contact">联系</a>
+      <a href="#home" class="logo" aria-label="返回首页"><span class="logo-mark" aria-hidden="true">W</span><span class="logo-text">吴超杰</span></a>
+      <nav class="nav-links" id="nav-links" aria-label="主导航">
+        <a href="#home" class="active">首页</a><a href="#about">关于我</a><a href="#articles">文章</a><a href="#projects">项目</a><a href="#contact">联系</a>
       </nav>
       <a href="#contact" class="btn btn-primary nav-cta">联系我</a>
-      <button class="menu-toggle" id="menu-toggle" aria-label="打开菜单">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
     </div>
   </header>
 
-  <!-- 首屏 Hero -->
-  <section id="home" class="hero">
-    <canvas id="orb-canvas" aria-hidden="true"></canvas>
-    <div class="container hero-inner">
-      <p class="eyebrow">个人介绍</p>
-      <h1 class="hero-title">吴<span class="accent">超杰</span></h1>
-      <p class="hero-subtitle" id="typed-wrap">我是一名 <span class="typed" id="typed"></span></p>
-      <p class="hero-desc">
-        热爱创造优雅、实用的产品。专注于把复杂的想法变成简洁的解决方案，
-        让技术像深海里的荧光一样自然流动。
-      </p>
-      <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">查看我的作品</a>
-        <a href="#contact" class="btn btn-ghost">联系我</a>
-      </div>
-      <div class="social-links">
-        <a href="https://github.com/wubaijian" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.xiaohongshu.com/user/profile/60f00351000000000100985c" target="_blank" rel="noopener">小红书</a>
-        <a href="#contact">邮箱</a>
-      </div>
-    </div>
-    <a href="#about" class="scroll-down" aria-label="向下滚动">↓</a>
-  </section>
-
-  <!-- 关于我 -->
-  <section id="about" class="section">
-    <div class="container">
-      <p class="eyebrow">关于我</p>
-      <h2 class="section-title">在深海中潜行，<br />把想法打磨成作品。</h2>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>
-            你好！我是一名充满热情的开发者 / 设计师 / 创作者。我喜欢探索新技术，
-            并用它们解决现实中的问题。
-          </p>
-          <p>
-            在过去的时间里，我参与并主导了多个项目，涵盖 Web 开发、移动应用、
-            数据可视化等领域。我相信持续学习和分享是成长的关键。
-          </p>
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">AI 产品经理 / 独立开发者</p>
+          <h1>把想法做成<br />能被使用的产品。</h1>
+          <p class="hero-desc">我是吴超杰，关注 AI 产品与人的真实需求，从产品定义一直做到可运行原型。</p>
+          <div class="hero-actions"><a href="#projects" class="btn btn-primary">查看项目</a><a href="#articles" class="text-link">阅读文章 <span aria-hidden="true">↘</span></a></div>
         </div>
-        <div class="stats-row">
-          <div class="stat">
-            <span class="stat-number" data-target="5">0</span>
-            <span class="stat-label">年经验</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number" data-target="30">0</span>
-            <span class="stat-label">完成项目</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number" data-target="20">0</span>
-            <span class="stat-label">满意客户</span>
-          </div>
+        <div class="hero-visual" aria-label="代表项目预览">
+          <figure class="hero-frame hero-frame-main"><img src="assets/images/liimit-ai-hero.jpg" alt="liimit.ai AI 游戏制作工作台" width="1200" height="675" decoding="async" fetchpriority="high" /></figure>
+          <figure class="hero-frame hero-frame-secondary"><img src="assets/images/mingzou-memory-player.jpg" alt="鸣奏回忆随歌播放器" width="603" height="640" decoding="async" /></figure>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 文章 -->
-  <section id="articles" class="section section-deep">
-    <div class="container">
-      <p class="eyebrow eyebrow-mist">文章</p>
-      <h2 class="section-title">我的文章</h2>
-      <div class="articles-grid">
-        <article class="article-card">
-          <p class="article-meta">文章一</p>
-          <h3>AI 时代的第一性原理：先找到人的不变量，再使用技术的变量</h3>
-          <a href="https://mp.weixin.qq.com/s/8g_APLlau6TEewy3q_07pA" target="_blank" rel="noopener" class="arrow-btn" aria-label="阅读文章">↗</a>
-        </article>
-        <article class="article-card">
-          <p class="article-meta">文章二</p>
-          <h3>从页面原型到可运行逻辑：Dify对AI产品经理的价值</h3>
-          <a href="https://mp.weixin.qq.com/s/b1RlEavnDTA1wngGUAhUbQ" target="_blank" rel="noopener" class="arrow-btn" aria-label="阅读文章">↗</a>
-        </article>
+    <section id="about" class="section about-section">
+      <div class="container about-layout">
+        <h2>产品判断、原型实现与持续迭代，我会把它们放在同一条工作流里。</h2>
+        <div class="about-copy"><p>我喜欢从人的真实问题出发，理清产品价值，再用设计和代码迅速验证。</p><div class="capability-list" aria-label="能力方向"><span>产品策略</span><span>AI 应用</span><span>原型开发</span><span>用户体验</span></div></div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 项目 -->
-  <section id="projects" class="section">
-    <div class="container">
-      <p class="eyebrow">项目</p>
-      <h2 class="section-title">精选作品</h2>
-      <div class="projects-grid">
-        <article class="project-card">
-          <img
-            class="project-image"
-            src="assets/images/liimit-ai-hero.png"
-            alt="liimit.ai AI 游戏制作工作台界面"
-            decoding="async"
-          />
-          <h3>liimit.ai</h3>
-          <p>本地优先的 AI 横版游戏制作客户端，把一个游戏想法转化为可运行、可继续迭代的 Phaser 3 项目。</p>
-          <div class="project-tags">
-            <span>Electron</span><span>React</span><span>Phaser 3</span><span>AI Agent</span>
-          </div>
-          <a href="https://github.com/wubaijian/liimit.ai" target="_blank" rel="noopener" class="arrow-btn" aria-label="查看 liimit.ai GitHub 仓库">↗</a>
-        </article>
-        <article class="project-card">
-          <img
-            class="project-image project-image-portrait"
-            src="assets/images/mingzou-memory-player.jpg"
-            alt="鸣奏回忆随歌全屏播放器界面"
-            decoding="async"
-          />
-          <h3>鸣奏</h3>
-          <p>可自部署的双人一起听歌播放器，融合实时同步、AI 听歌伴侣、双人 K 歌与“回忆随歌”体验。</p>
-          <div class="project-tags">
-            <span>React</span><span>Express</span><span>WebSocket</span><span>SQLite</span>
-          </div>
-          <a href="https://github.com/wubaijian/mingzou" target="_blank" rel="noopener" class="arrow-btn" aria-label="查看鸣奏 GitHub 仓库">↗</a>
-        </article>
-        <article class="project-card">
-          <div class="project-icon">📊</div>
-          <h3>项目三</h3>
-          <p>数据可视化平台，将复杂数据转化为直观的图表。</p>
-          <div class="project-tags">
-            <span>D3.js</span><span>Python</span>
-          </div>
-          <a href="#" class="arrow-btn" aria-label="了解更多">↗</a>
-        </article>
+    <section id="articles" class="section articles-section">
+      <div class="container">
+        <div class="section-heading"><h2>产品思考</h2><p>记录我对 AI 产品、工具和方法的理解。</p></div>
+        <div class="article-list">
+          <a href="https://mp.weixin.qq.com/s/8g_APLlau6TEewy3q_07pA" target="_blank" rel="noopener" class="article-row"><span class="article-index">01</span><h3>AI 时代的第一性原理：先找到人的不变量，再使用技术的变量</h3><span class="row-arrow" aria-hidden="true">↗</span></a>
+          <a href="https://mp.weixin.qq.com/s/b1RlEavnDTA1wngGUAhUbQ" target="_blank" rel="noopener" class="article-row"><span class="article-index">02</span><h3>从页面原型到可运行逻辑：Dify 对 AI 产品经理的价值</h3><span class="row-arrow" aria-hidden="true">↗</span></a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 联系 -->
-  <section id="contact" class="section section-deep">
-    <div class="container">
-      <p class="eyebrow eyebrow-mist">联系我</p>
-      <div class="contact-list">
-        <a href="mailto:1145738692@qq.com" class="contact-item">1145738692@qq.com</a>
-        <a href="tel:19956089893" class="contact-item">19956089893</a>
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <div class="section-heading projects-heading"><p class="eyebrow">精选项目</p><h2>从概念到可运行的产品</h2></div>
+        <div class="project-list">
+          <article class="project-feature project-feature-wide">
+            <a href="https://github.com/wubaijian/liimit.ai" target="_blank" rel="noopener" class="project-media" aria-label="在 GitHub 查看 liimit.ai"><img src="assets/images/liimit-ai-hero.jpg" alt="liimit.ai AI 游戏制作工作台界面" width="1200" height="675" loading="lazy" decoding="async" /></a>
+            <div class="project-info"><div><h3>liimit.ai</h3><p>本地优先的 AI 横版游戏制作客户端，把游戏想法转化为可运行、可继续迭代的 Phaser 3 项目。</p></div><div class="project-meta"><span>Electron</span><span>React</span><span>Phaser 3</span><span>AI Agent</span></div></div>
+          </article>
+          <article class="project-feature project-feature-split">
+            <a href="https://github.com/wubaijian/mingzou" target="_blank" rel="noopener" class="project-media project-media-portrait" aria-label="在 GitHub 查看鸣奏"><img src="assets/images/mingzou-memory-player.jpg" alt="鸣奏回忆随歌全屏播放器界面" width="603" height="640" loading="lazy" decoding="async" /></a>
+            <div class="project-info"><div><h3>鸣奏</h3><p>可自部署的双人听歌播放器，融合实时同步、AI 听歌伴侣、双人 K 歌与回忆随歌体验。</p></div><div class="project-meta"><span>React</span><span>Express</span><span>WebSocket</span><span>SQLite</span></div></div>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 页脚 -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> 吴超杰</p>
-      <p class="footer-note">在深海般的专注中打磨每一个细节。</p>
-    </div>
-  </footer>
+    <section id="contact" class="section contact-section">
+      <div class="container contact-layout">
+        <div><h2>有想法，欢迎来聊。</h2><p>产品交流、项目合作或一个具体问题，都可以直接联系我。</p></div>
+        <div class="contact-links"><a href="mailto:1145738692@qq.com">1145738692@qq.com <span aria-hidden="true">↗</span></a><a href="https://github.com/wubaijian" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a><a href="https://www.xiaohongshu.com/user/profile/60f00351000000000100985c" target="_blank" rel="noopener">小红书 <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
+  </main>
 
+  <footer class="footer"><div class="container footer-inner"><p>© <span id="year"></span> 吴超杰</p><p>AI 产品经理 / 独立开发者</p></div></footer>
   <script src="js/main.js"></script>
 </body>
 </html>
