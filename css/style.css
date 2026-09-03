@@ -432,15 +432,25 @@ a {
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease;
+  overflow: hidden;
 }
 
 .project-card:hover {
   transform: translateY(-4px);
 }
 
-.project-icon {
-  font-size: 40px;
-  margin-bottom: 24px;
+.project-image {
+  display: block;
+  width: calc(100% + 72px);
+  height: 190px;
+  margin: -36px -36px 28px;
+  object-fit: cover;
+  object-position: center;
+  background: var(--color-fog-white);
+}
+
+.project-image-portrait {
+  object-position: center 32%;
 }
 
 .project-card h3 {
